@@ -1,0 +1,140 @@
+/*-----Header -----*/
+header {
+    background-color: #ebebeb;
+    background: linear-gradient(to bottom, #ffffff 0%, #f7f7f9 100%);
+    border-bottom: 1px solid #EBEBEB;
+}
+
+/*----- Navbar -----*/
+header #navbarNavLinks {
+    font-size: 0.95rem;
+    transition: transform 0.3s linear;
+}
+
+header #navbarNavLinks.outside {
+    transform: translateY(-10vh);
+}
+
+header #navbarNavLinks a {
+    color: #555;
+}
+
+header #navbarNavLinks a.active {
+    color: #222;
+    border-bottom: 2px solid;
+}
+
+header #navbarNavLinks+div,
+header #navbarNavLinks+div i {
+    color: #222;
+}
+
+header #navbarNavLinks+div i {
+    background-color: #f2f2f2;
+    font-size: 1rem;
+    width: fit-content;
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+.nav-toggler {
+    background-color: transparent;
+
+    padding: 0;
+}
+
+
+/*----- Searchbar -----*/
+header .search-bar {
+    background-color: white;
+    width: 50%;
+    max-width: 600px;
+    min-width: 400px;
+    margin: 0 auto;
+    padding: 8px 10px;
+    border-radius: 35px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 0px 25px 9px #CFCFCF5b;
+    box-shadow: 0px 0px 25px 9px #cfcfcf5b;
+    transition: all 0.5s linear;    
+}
+
+header .search-section {
+    padding: 0 10px;
+    width: 25%;
+}
+
+header .search-section label,
+header .search-section input {
+    cursor: pointer;
+    width: 100%;
+}
+
+header .search-bar input {
+    border: 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+header .search-bar input:focus {
+    outline: 0;
+}
+
+header .search-bar i {
+    background-color: #E00B41;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+/*----- Searchbar shrink -----*/
+header .search-bar.shrink {
+    padding: 5px;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    width: 30%;
+}
+
+header .search-bar.shrink input{
+    display: none;
+}
+
+header .search-bar.shrink i {
+    font-size: 0.8rem;
+    padding: 8px;
+}
+
+
+/*----- Media query -----*/
+@media screen and (max-width:959px) {
+    header #navbarNavLinks,
+    header #navbarNavLinks+div > a:first-child {
+        display: none;
+    }
+
+    
+    header .search-bar {
+        padding: 5px;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        width: 30%;
+    }
+
+    header .search-bar input {
+        display: none;
+    }
+
+
+    header .search-bar i {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+
+}
